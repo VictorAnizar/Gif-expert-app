@@ -26,19 +26,22 @@ const GifGrid = ({ category }) => {
 
 
     return (
-        <>
-            <h3>{category}</h3>
-            <ul>
+        <div >
+            <h1>Resultados para: "{category}"</h1>
+            <div className="grid-categories">
                 {gif.map(e => {
                     return (
-                        <li key={e.id}>
+                        <div key={e.id} style={{display:"flex", justifyContent:"center",alignItems:"center", textAlign: "center" }}>
                             <h4>{e.title}</h4>
                             <img src={e.url} width="200px" alt={e.title} />
-                        </li>
+
+                        </div>
                     )
                 })}
-            </ul>
-        </>
+
+            </div>
+            <hr />
+        </div>
     )
 }
 
